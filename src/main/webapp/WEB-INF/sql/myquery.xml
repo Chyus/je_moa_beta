@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+    
+<sqlMap namespace="myquery">
+
+  <!--  <typeAlias alias="myitemDtot" type="com.je.me3.dto.MyitemDto"/> -->
+  
+	<select id="inquire" resultClass="com.je.me5.dto.BoardDto">
+		select idx as idx
+		     , title as title
+		     , writer as writer
+		     , regdate as regdate
+		     , content as content
+		     , count as count
+		     , regip as regip
+		  from board3
+	</select>
+	
+	<insert id="insert" parameterClass = "com.je.me5.dto.BoardDto">
+		INSERT INTO board3(title,writer,regdate,content,COUNT,regip )
+	    VALUES(#title# ,#writer# ,#regdate# , #content#, '1',#regip#) 
+	</insert>
+	
+	<delete id="delete" parameterClass = "com.je.me5.dto.BoardDto">
+	    delete from board3 where idx = #idx# 
+	</delete>
+
+	
+	<select id="detail" parameterClass = "com.je.me5.dto.BoardDto" resultClass="com.je.me5.dto.BoardDto">
+		select idx as idx
+		     , title as title
+		     , writer as writer
+		     , regdate as regdate
+		     , content as content
+		     , count as count
+		     , regip as regip
+		  from board3
+		 where idx = #idx#
+	</select>
+	
+	 <update id="update" parameterClass = "com.je.me5.dto.BoardDto" >
+		update board3
+		   set count = count + 1
+		 where idx = #idx#
+	</update>
+
+</sqlMap>
