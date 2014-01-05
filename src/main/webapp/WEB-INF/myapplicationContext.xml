@@ -7,7 +7,7 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
- 
+ <!--  주석을 달아서 수정합니다. -->
    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/je_test" />
@@ -28,7 +28,7 @@
 	</bean>
 
    
-	<bean id="BoardDao" class="com.je.me5.daoImpl.BoarddaoImpl">
+	<bean id="BoardDao" class="com.je.me5.daoImpl.BoardDaoImpl">
 		<property name="sqlmap" ref="sqlMapClientTemplate"></property>
 	</bean>
 
