@@ -28,7 +28,7 @@
 	</bean>
 
    
-	<bean id="BoardDao" class="com.je.me5.daoImpl.BoardDaoImpl">
+	<bean id="BoardDao" class="com.je.me5.daoImpl.BoarddaoImpl">
 		<property name="sqlmap" ref="sqlMapClientTemplate"></property>
 	</bean>
 
