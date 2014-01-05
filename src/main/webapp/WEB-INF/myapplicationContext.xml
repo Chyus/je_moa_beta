@@ -10,9 +10,9 @@
  <!--  주석을 달아서 수정합니다. -->
    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/je_test" />
-		<property name="username" value="root"/>
-		<property name="password" value="world009" />
+		<property name="url" value="jdbc:mysql://jedb.czozo7ysq0nu.ap-northeast-1.rds.amazonaws.com:3306/moadb" />
+		<property name="username" value="moaproject"/>
+		<property name="password" value="jeproject" />
 	</bean>
 	
  
